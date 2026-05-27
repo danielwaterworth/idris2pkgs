@@ -57,6 +57,7 @@ in
       buildPhase ? null,
       installPhase ? null,
       doCheck ? false,
+      doInstallDocs ? true,
       checkPhase ? "",
       passthru ? { },
       meta ? { },
@@ -120,8 +121,14 @@ in
             elif [ "${ipkgDir}" != "." ] && [[ "$actualBuildDir" != /* ]]; then
               actualBuildDir=${ipkgDir}/$actualBuildDir
             fi
+            ${lib.optionalString doInstallDocs ''
+              idris2 --mkdoc ${ipkg}
+            ''}
             if [ -d "$actualBuildDir/ttc" ]; then
               cp -R "$actualBuildDir/ttc/." ${packageDir}/
+            fi
+            if [ -d "$actualBuildDir/docs" ]; then
+              cp -R "$actualBuildDir/docs" ${packageDir}/
             fi
             awk '
               /^[[:space:]]*package[[:space:]]+/ { print; next }
