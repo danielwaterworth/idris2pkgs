@@ -4,7 +4,7 @@
     packageName = "algdata";
     version = "0.2";
     url = "https://gitlab.com/avidela/algebraic-data";
-    rev = "8fe9ec5c56ee043046df9a50d4280602ac352b88";
+    rev = "e266ad0180aed2b75ea7004915bdd6111086cc45";
     ipkg = "algdata.ipkg";
     deps = [ ];
     description = "Basic data types as algebraic operators";
@@ -14,7 +14,7 @@
     packageName = "algebra";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-algebra";
-    rev = "e279843a99fe250e2fcd928c774ddb6ffe36815b";
+    rev = "b80241edadc9237c2663df098c27e6dbc99886d0";
     ipkg = "algebra.ipkg";
     deps = [ ];
     description = "Lawful algebraic structures";
@@ -43,7 +43,7 @@
     packageName = "array";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-array";
-    rev = "8f9c84bc71dae21c6fe430296c6a094f7706748c";
+    rev = "7cca4fe58f28436b73f077e836c09fce091da4e9";
     ipkg = "array.ipkg";
     deps = [
       "algebra"
@@ -69,7 +69,7 @@
     packageName = "async-dom";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-async-dom";
-    rev = "2806d8514ce0d22153560b33c1f2aad55d540440";
+    rev = "df08a47277538ea8a3c068267e5f60dbaf6417cd";
     ipkg = "async-dom.ipkg";
     deps = [
       "barbies"
@@ -79,6 +79,15 @@
       "streams"
     ];
     description = "Concurrency and streaming in interactive web pages";
+  };
+  "async-dom-extra" = {
+    packageName = "async-dom-extra";
+    version = "0.0.1";
+    url = "https://github.com/stefan-hoeck/idris2-async-dom";
+    rev = "df08a47277538ea8a3c068267e5f60dbaf6417cd";
+    ipkg = "extra/async-dom-extra.ipkg";
+    deps = [ "async-dom" ];
+    description = "Opinionated utilities for writing web apps with async-dom";
   };
   "async-epoll" = {
     packageName = "async-epoll";
@@ -423,12 +432,11 @@
     packageName = "cyby-css";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "f4e8f995c0c9b51e6d371f84993da12c0aab81be";
+    rev = "23fdca4c7bfb1974b8f08eb106a759fa2b793415";
     ipkg = "cyby-css/cyby-css.ipkg";
     deps = [
-      "async-dom"
+      "async-dom-extra"
       "chem"
-      "css"
     ];
     description = "An opinionated CSS framework written in Idris";
   };
@@ -436,7 +444,7 @@
     packageName = "cyby-draw";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "f4e8f995c0c9b51e6d371f84993da12c0aab81be";
+    rev = "23fdca4c7bfb1974b8f08eb106a759fa2b793415";
     ipkg = "cyby-draw.ipkg";
     deps = [
       "array"
@@ -488,7 +496,7 @@
     packageName = "deptycheck";
     version = "0.0.260223";
     url = "https://github.com/buzden/deptycheck";
-    rev = "1e828990ed2cdb2e46a28e1aba7718efa500ca9e";
+    rev = "9536820c058d21d077c81fba1fb560a090576064";
     ipkg = "deptycheck.ipkg";
     deps = [
       "ansi"
@@ -634,7 +642,7 @@
     packageName = "elab-util-extra";
     version = "0.0.0";
     url = "https://github.com/buzden/deptycheck";
-    rev = "1e828990ed2cdb2e46a28e1aba7718efa500ca9e";
+    rev = "9536820c058d21d077c81fba1fb560a090576064";
     ipkg = "elab-util-extra/elab-util-extra.ipkg";
     deps = [
       "collection-utils"
@@ -682,7 +690,7 @@
     packageName = "evince";
     version = "0.5.0";
     url = "https://github.com/bio-aeon/evince";
-    rev = "c54d475d494ac71f00eebb5e7599b6288d8df616";
+    rev = "d6d2311e9ed95a140608e3a67fbfe8652e383389";
     ipkg = "evince/evince.ipkg";
     deps = [ "pretty-show" ];
     description = "A testing framework for Idris 2";
@@ -693,7 +701,7 @@
     packageName = "evince-hedgehog";
     version = "0.5.0";
     url = "https://github.com/bio-aeon/evince";
-    rev = "c54d475d494ac71f00eebb5e7599b6288d8df616";
+    rev = "d6d2311e9ed95a140608e3a67fbfe8652e383389";
     ipkg = "evince-hedgehog/evince-hedgehog.ipkg";
     deps = [
       "evince"
@@ -792,7 +800,7 @@
     packageName = "fs-utils";
     version = "0.1.0";
     url = "https://gitlab.com/avidela/fs-utils";
-    rev = "650c710a75e8516e7be688f1b5dbb48b44b05985";
+    rev = "28dd3c9a1f086f54704c17c4f2d65378fe3b6f3e";
     ipkg = "fs-utils.ipkg";
     deps = [ ];
   };
@@ -926,7 +934,7 @@
     packageName = "http-client-api";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "703e351f3fc878cef937b8c46cb1f740251ad162";
+    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
     ipkg = "http-client-api/http-client-api.ipkg";
     deps = [
       "async-js"
@@ -939,7 +947,7 @@
     packageName = "http-server-api";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "703e351f3fc878cef937b8c46cb1f740251ad162";
+    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
     ipkg = "http-server-api/http-server-api.ipkg";
     deps = [
       "http-types"
@@ -951,7 +959,7 @@
     packageName = "http-types";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "703e351f3fc878cef937b8c46cb1f740251ad162";
+    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
     ipkg = "http-types.ipkg";
     deps = [
       "async"
@@ -1061,7 +1069,7 @@
     packageName = "ilex";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "ilex.ipkg";
     deps = [
       "algebra"
@@ -1077,7 +1085,7 @@
     packageName = "ilex-core";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "core/ilex-core.ipkg";
     deps = [
       "bytestring"
@@ -1089,7 +1097,7 @@
     packageName = "ilex-debug";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "debug/ilex-debug.ipkg";
     deps = [
       "elab-pretty"
@@ -1116,7 +1124,7 @@
     packageName = "ilex-json";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "json/ilex-json.ipkg";
     deps = [ "ilex" ];
     description = "Total and efficient parser and lexer for the JSON file format";
@@ -1126,7 +1134,7 @@
     packageName = "ilex-streams";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "streams/ilex-streams.ipkg";
     deps = [
       "elin"
@@ -1139,7 +1147,7 @@
     packageName = "ilex-toml";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "56098d3a15767e68eeafa081345ecf4159cdf8e5";
+    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
     ipkg = "toml/ilex-toml.ipkg";
     deps = [
       "ilex"
@@ -1159,7 +1167,7 @@
     packageName = "indexed-graph";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-indexed-graph";
-    rev = "efa4306114261d222be802eb3188b253a5640d8c";
+    rev = "b8f1fb1157cbe6ac9b487efa81284ab4342169af";
     ipkg = "indexed-graph.ipkg";
     deps = [
       "array"
@@ -1879,7 +1887,7 @@
     packageName = "refined";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-refined";
-    rev = "02e43fa2b89076b4096c5f442bac7bea8814d552";
+    rev = "7ad095dc89232cfa667e47ae507b13f132837fdd";
     ipkg = "refined.ipkg";
     deps = [
       "algebra"
@@ -1892,7 +1900,7 @@
     packageName = "refined-json";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-refined";
-    rev = "02e43fa2b89076b4096c5f442bac7bea8814d552";
+    rev = "7ad095dc89232cfa667e47ae507b13f132837fdd";
     ipkg = "json/refined-json.ipkg";
     deps = [
       "json-simple"
@@ -1906,7 +1914,7 @@
     packageName = "refined-tsv";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-refined";
-    rev = "02e43fa2b89076b4096c5f442bac7bea8814d552";
+    rev = "7ad095dc89232cfa667e47ae507b13f132837fdd";
     ipkg = "tsv/refined-tsv.ipkg";
     deps = [
       "parser-tsv"
@@ -1999,7 +2007,7 @@
     packageName = "scgi";
     version = "0.7.0";
     url = "https://github.com/idris-community/idris2-scgi";
-    rev = "8abd9a8555cb2cd2717339a8a21656c020869970";
+    rev = "7551730d60a37b67cd1e7a9557bb588dfc168545";
     ipkg = "scgi.ipkg";
     deps = [
       "ansi"
@@ -2112,53 +2120,6 @@
     ];
     description = "Streaming SQlite results";
     license = "BSD-3 Clause";
-  };
-  "stellar-api" = {
-    packageName = "stellar-api";
-    version = "0.1";
-    url = "https://gitlab.com/avidela/stellar";
-    rev = "9df3a9467f800175db0f44483e0ee02705848bdf";
-    ipkg = "api/stellar-api.ipkg";
-    deps = [
-      "algdata"
-      "fs-utils"
-    ];
-    description = "Base Stellar library for API programming";
-    license = "MIT";
-  };
-  "stellar-http" = {
-    packageName = "stellar-http";
-    version = "0.1";
-    url = "https://gitlab.com/avidela/stellar";
-    rev = "9df3a9467f800175db0f44483e0ee02705848bdf";
-    ipkg = "http/stellar-http.ipkg";
-    deps = [
-      "continuation-monad"
-      "fs-utils"
-      "json-simple"
-      "node"
-      "stellar-api"
-      "tyttp"
-      "tyttp-adapter-node"
-    ];
-    description = "Node server bindings for Stellar";
-    license = "MIT";
-  };
-  "stellar-sql" = {
-    packageName = "stellar-sql";
-    version = "0.1";
-    url = "https://gitlab.com/avidela/stellar";
-    rev = "9df3a9467f800175db0f44483e0ee02705848bdf";
-    ipkg = "sql/stellar-sql.ipkg";
-    deps = [
-      "algdata"
-      "json"
-      "sqlite3"
-      "sqlite3-rio"
-      "stellar-api"
-    ];
-    description = "SQL Binding for Stellar";
-    license = "MIT";
   };
   "streams" = {
     packageName = "streams";
