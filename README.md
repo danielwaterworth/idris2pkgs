@@ -7,6 +7,9 @@ The package metadata is generated from `idris2-pack-db` plus each package's
 `.ipkg` file. Package sources are pinned to resolved commits from
 `STATUS.md` when available.
 
+Idris build helpers are provided by
+[`nix-idris2`](https://github.com/danielwaterworth/nix-idris2).
+
 ## Usage
 
 Build a package:
@@ -48,7 +51,7 @@ but the package set does not depend on flakes.
 
 ## Private Packages
 
-The package set exposes the same builder used for generated packages:
+The package set exposes the `nix-idris2` builder used for generated packages:
 
 - `mkIdris2Package`
 - `idris2WithPackages`
