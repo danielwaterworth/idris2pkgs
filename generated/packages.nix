@@ -234,7 +234,7 @@
     packageName = "bytestring";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-bytestring";
-    rev = "230d8577f02de22251786f128ec921078da4d880";
+    rev = "1c5c6160eef2a91b222d219383af6901c74b57e0";
     ipkg = "bytestring.ipkg";
     deps = [
       "algebra"
@@ -257,7 +257,7 @@
     packageName = "chem";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-chem";
-    rev = "86dd4cdac14bde6f370adb5225c96562417c98e9";
+    rev = "8b5d5b38388969f1feb61d1c763f167c9a5dfb26";
     ipkg = "chem.ipkg";
     deps = [
       "elab-util"
@@ -275,7 +275,7 @@
     packageName = "chem-generators";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-chem";
-    rev = "86dd4cdac14bde6f370adb5225c96562417c98e9";
+    rev = "8b5d5b38388969f1feb61d1c763f167c9a5dfb26";
     ipkg = "chem-generators/chem-generators.ipkg";
     deps = [
       "chem"
@@ -329,7 +329,7 @@
     packageName = "containers";
     version = "0.6.0";
     url = "https://github.com/idris-community/idris2-containers";
-    rev = "3568bb6d0be9f0c675cbf5f0ed4a120b4b767cb8";
+    rev = "cd7208400beb9346ee186c10c75b359fc6f11b66";
     ipkg = "containers.ipkg";
     deps = [
       "array"
@@ -432,7 +432,7 @@
     packageName = "cyby-css";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "23fdca4c7bfb1974b8f08eb106a759fa2b793415";
+    rev = "297afb87cf5530391605b855440d2275951b1164";
     ipkg = "cyby-css/cyby-css.ipkg";
     deps = [
       "async-dom-extra"
@@ -444,7 +444,7 @@
     packageName = "cyby-draw";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "23fdca4c7bfb1974b8f08eb106a759fa2b793415";
+    rev = "297afb87cf5530391605b855440d2275951b1164";
     ipkg = "cyby-draw.ipkg";
     deps = [
       "array"
@@ -496,7 +496,7 @@
     packageName = "deptycheck";
     version = "0.0.260223";
     url = "https://github.com/buzden/deptycheck";
-    rev = "9536820c058d21d077c81fba1fb560a090576064";
+    rev = "660a23e6da286359af6edad09b5d441a39a4f8c5";
     ipkg = "deptycheck.ipkg";
     deps = [
       "ansi"
@@ -642,7 +642,7 @@
     packageName = "elab-util-extra";
     version = "0.0.0";
     url = "https://github.com/buzden/deptycheck";
-    rev = "9536820c058d21d077c81fba1fb560a090576064";
+    rev = "660a23e6da286359af6edad09b5d441a39a4f8c5";
     ipkg = "elab-util-extra/elab-util-extra.ipkg";
     deps = [
       "collection-utils"
@@ -663,7 +663,7 @@
     packageName = "elin";
     version = "0.7.0";
     url = "https://github.com/stefan-hoeck/idris2-elin";
-    rev = "c66a6709397431150235e8bdddc0a21fcbedb7de";
+    rev = "70d0d81631da44c7e5abad758c751bb454f2c5b9";
     ipkg = "elin.ipkg";
     deps = [
       "quantifiers-extra"
@@ -746,7 +746,7 @@
     packageName = "finite";
     version = "0.5.0";
     url = "https://github.com/stefan-hoeck/idris2-finite";
-    rev = "5d9a9de5466030f3ffc5a0c2ad4ef647bc882a30";
+    rev = "d8defd1adfd4851803025f85edd5cc12c833cccc";
     ipkg = "finite.ipkg";
     deps = [ "elab-util" ];
     description = "A derivable interface for types with a finite number of inhabitants";
@@ -888,7 +888,7 @@
     packageName = "hedgehog";
     version = "0.6.0";
     url = "https://github.com/stefan-hoeck/idris2-hedgehog";
-    rev = "c987179433e1dab737cb4ba4772913bbefabe059";
+    rev = "de4d9b15278848f2ee2b99249a73899ef07eda57";
     ipkg = "hedgehog.ipkg";
     deps = [
       "ansi"
@@ -934,7 +934,7 @@
     packageName = "http-client-api";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
+    rev = "20bd7a0362cca4312c487457ef7aaa8a5e85160f";
     ipkg = "http-client-api/http-client-api.ipkg";
     deps = [
       "async-js"
@@ -947,7 +947,7 @@
     packageName = "http-server-api";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
+    rev = "20bd7a0362cca4312c487457ef7aaa8a5e85160f";
     ipkg = "http-server-api/http-server-api.ipkg";
     deps = [
       "http-types"
@@ -959,7 +959,7 @@
     packageName = "http-types";
     version = "0.8.0";
     url = "https://github.com/stefan-hoeck/idris2-http-types";
-    rev = "30d11fb54bb78b1d1be15d9e1cbbe497b656baf5";
+    rev = "20bd7a0362cca4312c487457ef7aaa8a5e85160f";
     ipkg = "http-types.ipkg";
     deps = [
       "async"
@@ -1038,7 +1038,7 @@
     packageName = "idris2-lsp";
     version = "0.7.0";
     url = "https://github.com/idris-community/idris2-lsp";
-    rev = "800fe94ccd37855ada2f91ac4a20281f29a4ebff";
+    rev = "fb6f798fb71cde07f02bf901f9fbb2b4112aa108";
     ipkg = "idris2-lsp.ipkg";
     deps = [
       "idris2"
@@ -1069,7 +1069,7 @@
     packageName = "ilex";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "ilex.ipkg";
     deps = [
       "algebra"
@@ -1085,7 +1085,7 @@
     packageName = "ilex-core";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "core/ilex-core.ipkg";
     deps = [
       "bytestring"
@@ -1097,7 +1097,7 @@
     packageName = "ilex-debug";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "debug/ilex-debug.ipkg";
     deps = [
       "elab-pretty"
@@ -1109,7 +1109,7 @@
     packageName = "ilex-fasta";
     version = "0.1.0";
     url = "https://github.com/Matthew-Mosior/idris2-bioinformatics";
-    rev = "c16240540ebedd2e89a9d371c209886ed1d1be4c";
+    rev = "6992a38e350292208fcc6e966da140ce59c9671b";
     ipkg = "fasta/ilex-fasta.ipkg";
     deps = [
       "async-epoll"
@@ -1117,14 +1117,12 @@
       "ilex-streams"
       "streams-posix"
     ];
-    description = "Stack-safe and efficient parser for the FASTA format.";
-    testStatus = "failure";
   };
   "ilex-json" = {
     packageName = "ilex-json";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "json/ilex-json.ipkg";
     deps = [ "ilex" ];
     description = "Total and efficient parser and lexer for the JSON file format";
@@ -1134,7 +1132,7 @@
     packageName = "ilex-streams";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "streams/ilex-streams.ipkg";
     deps = [
       "elin"
@@ -1147,7 +1145,7 @@
     packageName = "ilex-toml";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "4a7390f2dab7a70a3dc697f63137fd5424d25c57";
+    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
     ipkg = "toml/ilex-toml.ipkg";
     deps = [
       "ilex"
@@ -1192,7 +1190,7 @@
     packageName = "json";
     version = "0.5.0";
     url = "https://github.com/stefan-hoeck/idris2-json";
-    rev = "b15189c7198143e1357802ce8748dc1ab544da76";
+    rev = "496dbbab7321e3de04b75b7638b3284e84dae2ce";
     ipkg = "json.ipkg";
     deps = [
       "elab-util"
@@ -1206,7 +1204,7 @@
     packageName = "json-simple";
     version = "0.5.0";
     url = "https://github.com/stefan-hoeck/idris2-json";
-    rev = "b15189c7198143e1357802ce8748dc1ab544da76";
+    rev = "496dbbab7321e3de04b75b7638b3284e84dae2ce";
     ipkg = "simple/json-simple.ipkg";
     deps = [
       "elab-util"
@@ -1335,6 +1333,24 @@
     license = "MIT";
     testStatus = "success";
   };
+  "lsm-rrbvector" = {
+    packageName = "lsm-rrbvector";
+    version = "0.1.0";
+    url = "https://github.com/Matthew-Mosior/idris2-lsm-rrbvector";
+    rev = "cd8e6107b8dd03ee2757a1d085a02b03b8b7f3a3";
+    ipkg = "lsm-rrbvector.ipkg";
+    deps = [
+      "array"
+      "async"
+      "async-posix"
+      "elab-util"
+      "posix"
+      "ref1"
+    ];
+    description = "A Log-Structured Merge Relaxed Radix Balanced Vector";
+    license = "BSD-3 Clause";
+    testStatus = "success";
+  };
   "lsp-lib" = {
     packageName = "lsp-lib";
     version = "0.5.0";
@@ -1345,11 +1361,11 @@
   };
   "markdown" = {
     packageName = "markdown";
-    version = "0.1.3";
+    version = "0.2.0";
     url = "https://codeberg.org/berg4478/idris2-text-markdown";
-    rev = "0cd58c79d6112756557eb8f0785342dbbef00eb9";
+    rev = "f4745e6692995d0d00d8b0e412b91c77a1e54d83";
     ipkg = "markdown.ipkg";
-    deps = [ ];
+    deps = [ "elab-util" ];
     description = "Markdown parser and renderer for Idris2.";
     license = "MIT";
   };
@@ -1463,7 +1479,7 @@
     packageName = "pack";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-pack";
-    rev = "ebca311312b861ed18ac5db58b4044804fcbd103";
+    rev = "3174b1d383addcbac6ff8a1c9cebcd4fd19ce396";
     ipkg = "pack.ipkg";
     deps = [
       "elab-util"
@@ -1478,7 +1494,7 @@
     packageName = "pack-admin";
     version = "0.0.1";
     url = "https://github.com/stefan-hoeck/idris2-pack";
-    rev = "ebca311312b861ed18ac5db58b4044804fcbd103";
+    rev = "3174b1d383addcbac6ff8a1c9cebcd4fd19ce396";
     ipkg = "pack-admin.ipkg";
     deps = [
       "elab-util"
@@ -1693,7 +1709,7 @@
     packageName = "pjrt-plugin-xla-cpu";
     version = "0.0.3";
     url = "https://codeberg.org/joelberkeley/spidr";
-    rev = "1fc119cc1a352e6d8f4bce2338afef55ece47e0c";
+    rev = "4d26b242551cd886cc5c190e58067b7d9cb1c317";
     ipkg = "pjrt-plugins/xla-cpu/pjrt-plugin-xla-cpu.ipkg";
     deps = [ "spidr" ];
     description = "XLA PJRT plugin for CPU.";
@@ -1703,7 +1719,7 @@
     packageName = "pjrt-plugin-xla-cuda";
     version = "0.0.3";
     url = "https://codeberg.org/joelberkeley/spidr";
-    rev = "1fc119cc1a352e6d8f4bce2338afef55ece47e0c";
+    rev = "4d26b242551cd886cc5c190e58067b7d9cb1c317";
     ipkg = "pjrt-plugins/xla-cuda/pjrt-plugin-xla-cuda.ipkg";
     deps = [ "spidr" ];
     description = "XLA PJRT plugin for CUDA-enabled GPUs.";
@@ -1878,7 +1894,7 @@
     packageName = "ref1";
     version = "0.7.0";
     url = "https://github.com/stefan-hoeck/idris2-ref1";
-    rev = "f5b771217295ee692080c08ce5627644c3f86c73";
+    rev = "f7a20a9e41aba4026b50edddd689fc394d354b97";
     ipkg = "ref1.ipkg";
     deps = [ ];
     description = "Linear mutable references and utilities";
@@ -1944,7 +1960,7 @@
     packageName = "resource-pool";
     version = "0.1.0";
     url = "https://github.com/Matthew-Mosior/idris2-resource-pool";
-    rev = "8e27fc076d0cf06de46d4f6c0302fc97d910e760";
+    rev = "60d2053338a6ee7bdf70399cbe86d28d2f2e8cf1";
     ipkg = "resource-pool.ipkg";
     deps = [
       "array"
@@ -1953,6 +1969,7 @@
       "ref1"
     ];
     description = "A high-performance striped resource pooling implementation";
+    license = "BSD-3 Clause";
     testStatus = "success";
   };
   "rhone" = {
@@ -2007,7 +2024,7 @@
     packageName = "scgi";
     version = "0.7.0";
     url = "https://github.com/idris-community/idris2-scgi";
-    rev = "7551730d60a37b67cd1e7a9557bb588dfc168545";
+    rev = "80c5e0e3e40a2ce853fe5dac9b954cf4ad426e89";
     ipkg = "scgi.ipkg";
     deps = [
       "ansi"
@@ -2075,7 +2092,7 @@
     packageName = "spidr";
     version = "0.0.7";
     url = "https://codeberg.org/joelberkeley/spidr";
-    rev = "1fc119cc1a352e6d8f4bce2338afef55ece47e0c";
+    rev = "4d26b242551cd886cc5c190e58067b7d9cb1c317";
     ipkg = "spidr/spidr.ipkg";
     deps = [ "elab-util" ];
     description = "Hardware-accelerated machine learning with dependent types.";
@@ -2269,7 +2286,7 @@
     packageName = "tensortype";
     version = "0.0.0";
     url = "https://github.com/bgavran/TensorType";
-    rev = "b85946f0dd2ee4989b8900b6bbadf6c14340550b";
+    rev = "8fedb3ec31a203d30ed82f8d6d3548bf7c22b9a1";
     ipkg = "tensortype.ipkg";
     deps = [
       "elab-util"
@@ -2540,5 +2557,16 @@
     rev = "bfb02ff5c195218de7d33ed0ee9e6a26c60c0f0b";
     ipkg = "xml.ipkg";
     deps = [ ];
+  };
+  "yaml" = {
+    packageName = "yaml";
+    version = "0.1.0";
+    url = "https://github.com/mitchmindtree/idris2-yaml";
+    rev = "d946ee063cad5367f30630b357e142713ee04495";
+    ipkg = "yaml.ipkg";
+    deps = [ "parser" ];
+    description = "Total parser for the YAML file format";
+    license = "BSD-2-Clause";
+    testStatus = "success";
   };
 }

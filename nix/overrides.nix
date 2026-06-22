@@ -34,6 +34,14 @@
     '';
   };
 
+  idris2-lsp = {
+    buildPhase = ''
+      sed -i '/=> Ref PostS PostSession/d' src/Server/ProcessMessage.idr src/Server/Main.idr
+      sed -i '/p <- newRef PostS defaultPost/d' src/Server/Main.idr
+      idris2 --build idris2-lsp.ipkg
+    '';
+  };
+
   idrisGL = {
     buildInputs = [
       pkgs.SDL2
@@ -50,6 +58,14 @@
       mkdir -p $out/idris-packages/idris2-${pkgs.idris2.version}/idrisGL-1.0.0/lib $out/lib
       cp -R lib/* $out/idris-packages/idris2-${pkgs.idris2.version}/idrisGL-1.0.0/lib/
       cp -R lib/* $out/lib/
+    '';
+  };
+
+  markdown = {
+    buildPhase = ''
+      substituteInPlace src/Text/Markdown/Tokens.idr \
+        --replace-fail "rtrim . drop 3 <$> head' ls" "trim . drop 3 <$> head' ls"
+      idris2 --build markdown.ipkg
     '';
   };
 
