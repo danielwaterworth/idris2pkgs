@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780784299,
-        "narHash": "sha256-/IbgKo4oU+1fLPwW2MEEU5OserV8DMwKEzosWWGLbAc=",
+        "lastModified": 1782392486,
+        "narHash": "sha256-ewPSDOimgLTtCC6N19Z1JUsMR9MF310cnuDOR2FN/Dc=",
         "ref": "refs/heads/main",
-        "rev": "8ca72e2ab5a263d5a8c7d6c5441ad6303040207e",
-        "revCount": 1,
+        "rev": "ecb0514d9d9ff24e68af25e7ba18084540cc0a75",
+        "revCount": 2,
         "type": "git",
         "url": "ssh://git@github.com/danielwaterworth/nix-idris2.git"
       },
