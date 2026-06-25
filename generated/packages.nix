@@ -432,7 +432,7 @@
     packageName = "cyby-css";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "297afb87cf5530391605b855440d2275951b1164";
+    rev = "77c147ec1502e0c9f970024517a0a84b8b28b808";
     ipkg = "cyby-css/cyby-css.ipkg";
     deps = [
       "async-dom-extra"
@@ -444,7 +444,7 @@
     packageName = "cyby-draw";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-cyby-draw";
-    rev = "297afb87cf5530391605b855440d2275951b1164";
+    rev = "77c147ec1502e0c9f970024517a0a84b8b28b808";
     ipkg = "cyby-draw.ipkg";
     deps = [
       "array"
@@ -494,9 +494,9 @@
   };
   "deptycheck" = {
     packageName = "deptycheck";
-    version = "0.0.260223";
+    version = "0.0.260623";
     url = "https://github.com/buzden/deptycheck";
-    rev = "660a23e6da286359af6edad09b5d441a39a4f8c5";
+    rev = "20400cad184ceb365509d025d930387f09f69488";
     ipkg = "deptycheck.ipkg";
     deps = [
       "ansi"
@@ -642,7 +642,7 @@
     packageName = "elab-util-extra";
     version = "0.0.0";
     url = "https://github.com/buzden/deptycheck";
-    rev = "660a23e6da286359af6edad09b5d441a39a4f8c5";
+    rev = "20400cad184ceb365509d025d930387f09f69488";
     ipkg = "elab-util-extra/elab-util-extra.ipkg";
     deps = [
       "collection-utils"
@@ -663,7 +663,7 @@
     packageName = "elin";
     version = "0.7.0";
     url = "https://github.com/stefan-hoeck/idris2-elin";
-    rev = "70d0d81631da44c7e5abad758c751bb454f2c5b9";
+    rev = "8bb9ccdbe68ca0c4b19675ada350a30c7530db3a";
     ipkg = "elin.ipkg";
     deps = [
       "quantifiers-extra"
@@ -1069,7 +1069,7 @@
     packageName = "ilex";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "ilex.ipkg";
     deps = [
       "algebra"
@@ -1085,7 +1085,7 @@
     packageName = "ilex-core";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "core/ilex-core.ipkg";
     deps = [
       "bytestring"
@@ -1097,7 +1097,7 @@
     packageName = "ilex-debug";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "debug/ilex-debug.ipkg";
     deps = [
       "elab-pretty"
@@ -1117,12 +1117,14 @@
       "ilex-streams"
       "streams-posix"
     ];
+    description = "Stack-safe and efficient parser for the FASTA format.";
+    testStatus = "failure";
   };
   "ilex-json" = {
     packageName = "ilex-json";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "json/ilex-json.ipkg";
     deps = [ "ilex" ];
     description = "Total and efficient parser and lexer for the JSON file format";
@@ -1132,7 +1134,7 @@
     packageName = "ilex-streams";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "streams/ilex-streams.ipkg";
     deps = [
       "elin"
@@ -1145,7 +1147,7 @@
     packageName = "ilex-toml";
     version = "0.1.0";
     url = "https://github.com/stefan-hoeck/idris2-ilex";
-    rev = "22530cd0a21e7b8d736f5f32a7d005a2552c8bd0";
+    rev = "6071cc3c4666d26f293044cdf6d6f7df21b3e3ed";
     ipkg = "toml/ilex-toml.ipkg";
     deps = [
       "ilex"
@@ -1198,7 +1200,7 @@
       "parser"
     ];
     description = "Derivable JSON marshallers for Idris2";
-    testStatus = "success";
+    testStatus = "failure";
   };
   "json-simple" = {
     packageName = "json-simple";
@@ -1776,7 +1778,7 @@
     packageName = "pretty-show";
     version = "0.6.0";
     url = "https://github.com/stefan-hoeck/idris2-pretty-show";
-    rev = "b49cc6197aa9c6ca4bc941519f3088950a0c05a3";
+    rev = "07b79c5e69cd3f98bd23ff0019b23fe345a95a91";
     ipkg = "pretty-show.ipkg";
     deps = [
       "elab-pretty"
@@ -1830,7 +1832,7 @@
     packageName = "quantifiers-extra";
     version = "0.6.0";
     url = "https://github.com/stefan-hoeck/idris2-quantifiers-extra";
-    rev = "5e368c5dcc7724e19b1e9eb3baf8e206cf79d2a1";
+    rev = "751f03ca0a34fd3a41928674fe6a40a9725b87c9";
     ipkg = "quantifiers-extra.ipkg";
     deps = [ ];
     description = "Some additions to `Data.List.Quantifires`";
