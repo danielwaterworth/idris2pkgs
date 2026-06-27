@@ -3,14 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-idris2 = {
-      url = "git+ssh://git@github.com/danielwaterworth/nix-idris2.git";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
-    { nixpkgs, nix-idris2, ... }:
+    { nixpkgs, ... }:
     let
       supportedSystems = [
         "x86_64-linux"
@@ -25,7 +21,6 @@
         pkgs:
         import ./default.nix {
           inherit pkgs;
-          idris2Helpers = nix-idris2.lib.mkIdris2 pkgs;
         };
     in
     {
@@ -34,10 +29,7 @@
       };
 
       overlays.default = final: prev: {
-        idris2Packages = import ./default.nix {
-          pkgs = final;
-          idris2Helpers = nix-idris2.lib.mkIdris2 final;
-        };
+        idris2Packages = import ./default.nix { pkgs = final; };
       };
 
       packages = forAllSystems (
@@ -45,10 +37,7 @@
         let
           pkgs = import nixpkgs { inherit system; };
           idris2Packages = mkIdris2Packages pkgs;
-          packageDerivations =
-            pkgs.lib.filterAttrs
-              (_: value: pkgs.lib.isDerivation value)
-              idris2Packages;
+          packageDerivations = pkgs.lib.filterAttrs (_: value: pkgs.lib.isDerivation value) idris2Packages;
         in
         packageDerivations
         // {

@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "nix-idris2": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1782392486,
-        "narHash": "sha256-ewPSDOimgLTtCC6N19Z1JUsMR9MF310cnuDOR2FN/Dc=",
-        "ref": "refs/heads/main",
-        "rev": "ecb0514d9d9ff24e68af25e7ba18084540cc0a75",
-        "revCount": 2,
-        "type": "git",
-        "url": "ssh://git@github.com/danielwaterworth/nix-idris2.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/danielwaterworth/nix-idris2.git"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1781577229,
@@ -38,7 +18,6 @@
     },
     "root": {
       "inputs": {
-        "nix-idris2": "nix-idris2",
         "nixpkgs": "nixpkgs"
       }
     }

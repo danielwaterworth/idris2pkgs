@@ -7,8 +7,8 @@ The package metadata is generated from `idris2-pack-db` plus each package's
 `.ipkg` file. Package sources are pinned to resolved commits from
 `STATUS.md` when available.
 
-Idris build helpers are provided by
-[`nix-idris2`](https://github.com/danielwaterworth/nix-idris2).
+Idris build helpers are provided by `pkgs.idris2Packages.buildIdris` from
+`nixpkgs`.
 
 ## Usage
 
@@ -24,7 +24,7 @@ Create an Idris with packages environment:
 let
   idris2pkgs = import ./default.nix { inherit pkgs; };
 in
-idris2pkgs.idris2-with-packages [
+idris2pkgs.idris2WithPackages [
   idris2pkgs.algebra
   idris2pkgs.containers
 ]
@@ -51,9 +51,9 @@ but the package set does not depend on flakes.
 
 ## Private Packages
 
-The package set exposes the `nix-idris2` builder used for generated packages:
+The package set exposes the nixpkgs builder used for generated packages:
 
-- `mkIdris2Package`
+- `buildIdris`
 - `idris2WithPackages`
 
 For a private package:
@@ -64,21 +64,19 @@ For a private package:
 let
   idris2pkgs = import ./default.nix { inherit pkgs; };
 in
-idris2pkgs.mkIdris2Package {
-  pname = "my-private-package";
-  packageName = "my-private-package";
+idris2pkgs.buildIdris {
+  ipkgName = "my-private-package";
   version = "0.1.0";
   src = ./my-private-package;
-  ipkg = "my-private-package.ipkg";
-  idrisDeps = [
+  idrisLibraries = [
     idris2pkgs.algebra
     idris2pkgs.containers
   ];
-}
+}.library { }
 ```
 
 When using the overlay, the same builder is available at
-`pkgs.idris2Packages.mkIdris2Package`.
+`pkgs.idris2Packages.buildIdris`.
 
 If one private package depends on another, use a recursive attribute set:
 
@@ -86,26 +84,22 @@ If one private package depends on another, use a recursive attribute set:
 { pkgs ? import <nixpkgs> { overlays = [ (import ./overlay.nix) ]; } }:
 
 let
-  inherit (pkgs.idris2Packages) mkIdris2Package;
+  inherit (pkgs.idris2Packages) buildIdris;
 
   private = rec {
-    core = mkIdris2Package {
-      pname = "private-core";
-      packageName = "private-core";
+    core = buildIdris {
+      ipkgName = "private-core";
       version = "0.1.0";
       src = ./private-core;
-      ipkg = "private-core.ipkg";
-      idrisDeps = [ pkgs.idris2Packages.algebra ];
-    };
+      idrisLibraries = [ pkgs.idris2Packages.algebra ];
+    }.library { };
 
-    app = mkIdris2Package {
-      pname = "private-app";
-      packageName = "private-app";
+    app = buildIdris {
+      ipkgName = "private-app";
       version = "0.1.0";
       src = ./private-app;
-      ipkg = "private-app.ipkg";
-      idrisDeps = [ core ];
-    };
+      idrisLibraries = [ core ];
+    }.library { };
   };
 in
 private

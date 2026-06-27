@@ -10,35 +10,25 @@
     buildInputs = [ pkgs.gsl ];
   };
 
-  idris2 = {
-    buildPhase = ''
-      make src/IdrisPaths.idr PREFIX=$out
-      idris2 --build idris2api.ipkg
-    '';
-  };
-
   idris2-dep-graph = {
-    buildPhase = ''
+    preBuild = ''
       substituteInPlace idris2-dep-graph.ipkg \
         --replace-fail '  = idris2 >= 0.8.0' '  = idris2 >= 0.8.0
         , network'
-      idris2 --build idris2-dep-graph.ipkg
     '';
   };
 
   idris2-go = {
-    buildPhase = ''
+    preBuild = ''
       substituteInPlace idris2-go.ipkg \
         --replace-fail 'depends = idris2' 'depends = idris2, network'
-      idris2 --build idris2-go.ipkg
     '';
   };
 
   idris2-lsp = {
-    buildPhase = ''
+    preBuild = ''
       sed -i '/=> Ref PostS PostSession/d' src/Server/ProcessMessage.idr src/Server/Main.idr
       sed -i '/p <- newRef PostS defaultPost/d' src/Server/Main.idr
-      idris2 --build idris2-lsp.ipkg
     '';
   };
 
@@ -50,37 +40,34 @@
       pkgs.SDL2_mixer
       pkgs.SDL2_ttf
     ];
-    buildPhase = ''
+    preBuild = ''
       export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -I${lib.getDev pkgs.SDL2}/include/SDL2"
-      idris2 --build idrisGL.ipkg
     '';
     postInstall = ''
-      mkdir -p $out/idris-packages/idris2-${pkgs.idris2.version}/idrisGL-1.0.0/lib $out/lib
-      cp -R lib/* $out/idris-packages/idris2-${pkgs.idris2.version}/idrisGL-1.0.0/lib/
+      mkdir -p $out/lib
       cp -R lib/* $out/lib/
     '';
   };
 
   markdown = {
-    buildPhase = ''
+    preBuild = ''
       substituteInPlace src/Text/Markdown/Tokens.idr \
         --replace-fail "rtrim . drop 3 <$> head' ls" "trim . drop 3 <$> head' ls"
-      idris2 --build markdown.ipkg
     '';
   };
 
   ncurses-idris = {
     buildInputs = [ pkgs.ncurses ];
     postInstall = ''
-      TARGET_VERSION=0.4.0 make -C support install INSTALLDIR=$out/idris-packages/idris2-${pkgs.idris2.version}/ncurses-idris-0.4.0/lib
+      TARGET_VERSION=0.4.0 make -C support install INSTALLDIR=$out/lib/idris2-${pkgs.idris2.version}/ncurses-idris-0.4.0/lib
       mkdir -p $out/lib
-      cp -R $out/idris-packages/idris2-${pkgs.idris2.version}/ncurses-idris-0.4.0/lib/* $out/lib/
+      cp -R $out/lib/idris2-${pkgs.idris2.version}/ncurses-idris-0.4.0/lib/* $out/lib/
     '';
   };
 
   pg-idris = {
     buildInputs = [ pkgs.libpq ];
-    buildPhase = ''
+    preBuild = ''
       mkdir -p .nix-bin
       cat > .nix-bin/pg_config <<'EOF'
       #! ${pkgs.runtimeShell}
@@ -92,13 +79,12 @@
       EOF
       chmod +x .nix-bin/pg_config
       export PATH="$PWD/.nix-bin:$PATH"
-      idris2 --build pg-idris.ipkg
     '';
     postInstall = ''
       export PATH="$PWD/.nix-bin:$PATH"
-      TARGET_VERSION=0.0.8 make -C support install INSTALLDIR=$out/idris-packages/idris2-${pkgs.idris2.version}/pg-idris-0.0.8
+      TARGET_VERSION=0.0.8 make -C support install INSTALLDIR=$out/lib/idris2-${pkgs.idris2.version}/pg-idris-0.0.8
       mkdir -p $out/lib
-      cp -R $out/idris-packages/idris2-${pkgs.idris2.version}/pg-idris-0.0.8/lib/* $out/lib/
+      cp -R $out/lib/idris2-${pkgs.idris2.version}/pg-idris-0.0.8/lib/* $out/lib/
     '';
   };
 
@@ -110,25 +96,50 @@
     buildInputs = [ pkgs.sqlite ];
   };
 
+  spidr = {
+    preInstall = ''
+      export SPIDR_LOCAL_INSTALL=true
+    '';
+  };
+
   uv = {
     nativeBuildInputs = [ pkgs.pkg-config ];
     buildInputs = [ pkgs.libuv ];
     postInstall = ''
-      make -C support install INSTALLDIR=$out/idris-packages/idris2-${pkgs.idris2.version}/uv-0.1.0/lib
+      make -C support install INSTALLDIR=$out/lib/idris2-${pkgs.idris2.version}/uv-0.1.0/lib
       mkdir -p $out/lib
-      cp -R $out/idris-packages/idris2-${pkgs.idris2.version}/uv-0.1.0/lib/* $out/lib/
+      cp -R $out/lib/idris2-${pkgs.idris2.version}/uv-0.1.0/lib/* $out/lib/
     '';
   };
 
   uv-data = {
     nativeBuildInputs = [ pkgs.pkg-config ];
     buildInputs = [ pkgs.libuv ];
-    buildPhase = ''
+    preBuild = ''
       pushd data
       patchShebangs gencode.sh cleanup.sh
-      idris2 --build uv-data.ipkg
       popd
+    '';
+    postBuild = ''
       mkdir -p data/build
+    '';
+  };
+
+  uuid = {
+    preInstall = ''
+      export UUID_NOINSTALL_SUPPORT=true
+    '';
+  };
+
+  pjrt-plugin-xla-cpu = {
+    preInstall = ''
+      export SPIDR_LOCAL_INSTALL=true
+    '';
+  };
+
+  pjrt-plugin-xla-cuda = {
+    preInstall = ''
+      export SPIDR_LOCAL_INSTALL=true
     '';
   };
 }
